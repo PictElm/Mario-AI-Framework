@@ -270,7 +270,7 @@ public class MarioLevelModel {
      * @param level   the level string
      */
     public void copyFromString(int targetX, int targetY, int sourceX, int sourceY, int width, int height, String level) {
-        String[] lines = level.split("\n");
+        String[] lines = level.replace("\r", "").split("\n");
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
                 int maxWidth = lines[0].length();

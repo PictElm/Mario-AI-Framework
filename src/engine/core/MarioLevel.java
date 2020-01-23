@@ -32,7 +32,7 @@ public class MarioLevel {
             this.height = 0;
             return;
         }
-        String[] lines = level.split("\n");
+        String[] lines = level.replace("\r", "").split("\n");
         this.tileWidth = lines[0].length();
         this.width = this.tileWidth * 16;
         this.tileHeight = lines.length;
